@@ -1,0 +1,19 @@
+.Header_Container {
+  position: fixed;
+  height: 93px;
+  background-color: black;
+  width: 100%;
+  top: 0px;
+}
+
+@media screen and (max-width: 760px) {
+  .Header_Container {
+    height: 171px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .Header_Container {
+    height: 121px;
+  }
+}

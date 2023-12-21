@@ -1,19 +1,49 @@
 .Header_Container {
   position: fixed;
   height: 93px;
-  background-color: black;
+  background-color: #00A564;
   width: 100%;
   top: 0px;
+  color: rgba(255, 255, 255, 0.52);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 3.75rem;
+}
+
+.Button_Container {
+  display: flex;
+  width: 45%;
+}
+
+.Button_Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Logo_Container{
+  width: 30%;
 }
 
 @media screen and (max-width: 760px) {
   .Header_Container {
     height: 171px;
   }
+
+  .Button_Container{
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .Header_Container {
     height: 121px;
+  }
+  
+  .Button_Container{
+    width: 65%;
   }
 }

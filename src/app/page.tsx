@@ -6,7 +6,6 @@ import Header from "@/components/common/Header";
 
 const ContentsContainer = styled.div`
   margin: 0 auto;
-  /* color: rgba(255, 255, 255, 0.52); */
   background-color: pink;
   min-height: 350px;
   width: 1200px;

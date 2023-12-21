@@ -14,6 +14,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #00A564;
 }
 
 a {

@@ -6,7 +6,11 @@ const HeaderNavigateButton = ({
   category,
   viewValue,
 }: CategoryType): JSX.Element => {
-  return <Link href={`/${category}`}>{viewValue}</Link>;
+  return (
+    <Link className={styles.Link_Button} href={`/${category}`}>
+      {viewValue}
+    </Link>
+  );
 };
 
 export default function Header() {

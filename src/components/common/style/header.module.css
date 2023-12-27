@@ -1,7 +1,7 @@
 .Header_Container {
   position: fixed;
   height: 93px;
-  background-color: #00A564;
+  background-color: #00a564;
   width: 100%;
   top: 0px;
   color: rgba(255, 255, 255, 0.52);
@@ -22,18 +22,28 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.Logo_Container{
+.Logo_Container {
   width: 30%;
+}
+
+.Link_Button {
+  width: "100%";
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
 }
 
 @media screen and (max-width: 760px) {
   .Header_Container {
     height: 171px;
+    padding: 0rem 1.563rem;
+    font-size: 1rem;
   }
 
-  .Button_Container{
+  .Button_Container {
     width: 70%;
   }
 }
@@ -42,8 +52,8 @@
   .Header_Container {
     height: 121px;
   }
-  
-  .Button_Container{
+
+  .Button_Container {
     width: 65%;
   }
 }

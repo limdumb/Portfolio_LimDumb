@@ -6,6 +6,16 @@
   align-items: center;
 }
 
+.Intro_Title_Wrapper{
+  width: 50%;
+  height: 100%;
+}
+
+.Intro_Image_Wrapper{
+  width: 50%;
+  height: 100%;
+}
+
 @media screen and (max-width: 760px) {
   .Main_Container {
     padding: 105px 0px;

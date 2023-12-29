@@ -1,0 +1,10 @@
+.Stack_Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Stack_Title{
+  margin-right: 10px;
+}

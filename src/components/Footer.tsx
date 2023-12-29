@@ -1,7 +1,10 @@
+'use client'
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
   position: fixed;
+  display: flex;
+  align-items: center;
   z-index: 20;
   width: 100%;
   height: 40px;

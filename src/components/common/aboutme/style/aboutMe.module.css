@@ -1,0 +1,17 @@
+.Info_Contents_Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+@media screen and (max-width: 760px) {
+  .Info_Contents_Wrapper {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .Info_Contents_Wrapper {
+    width: 960px;
+  }
+}

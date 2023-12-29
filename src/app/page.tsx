@@ -5,20 +5,38 @@ import styles from "./page.module.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+interface ContainerPropsType {
+  category: "aboutme" | "project" | "record" | "stack";
+}
 
-// Web Front End 개발자 임경인 입니다
-// All Career Year 0
-// It's New! 나의 첫 커리어를 시작할 회사를 찾고있습니다.
-// My 4 Advantages
+export const MainContainer = styled.div<ContainerPropsType>`
+  background-color: ${(props) =>
+    props.category === "aboutme" ? "#FFFFFF" : "#00a564"};
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 93px 0px 40px 0px;
+  @media screen and (max-width: 760px) {
+    & {
+      padding: 171px 0px 40px 0px;
+    }
+  }
 
-const ContentsContainer = styled.div`
+  @media screen and (min-width: 760px) and (max-width: 1199px) {
+    & {
+      padding: 121px 0px 40px 0px;
+    }
+  }
+`;
+
+export const ContentsContainer = styled.div`
   margin: 0 auto;
   background-color: pink;
-  min-height: 350px;
+  min-height: 555px;
   width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   @media screen and (max-width: 760px) {
     & {
       max-width: 340px;
@@ -34,7 +52,7 @@ const ContentsContainer = styled.div`
 
 export default function Home() {
   return (
-    <div className={styles.Main_Container}>
+    <MainContainer category="project">
       <Header />
       <ContentsContainer>
         <div className={styles.Intro_Title_Wrapper}>
@@ -42,13 +60,13 @@ export default function Home() {
           <h1>Im Web Front End Developer!</h1>
           <h2>Welcome to Eddie’s Portfolio Tree</h2>
         </div>
-        <div className={styles.Intro_Image_wrapper}>
+        <div className={styles.Intro_Image_Wrapper}>
           <div>
             <Image src={""} alt="" />
           </div>
         </div>
       </ContentsContainer>
       <Footer />
-    </div>
+    </MainContainer>
   );
 }

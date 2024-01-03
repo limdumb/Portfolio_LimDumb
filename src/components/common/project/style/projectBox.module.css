@@ -8,7 +8,7 @@
   font-size: 16px;
   display: block;
   letter-spacing: -0.02em;
-  color: #2F2F2F;
+  color: #2f2f2f;
   opacity: 0.4;
 }
 
@@ -23,6 +23,10 @@
   max-width: 25%;
 }
 
+.Project_Title {
+  color: #2f2f2f;
+}
+
 .Detaile_Wrapper {
   margin-left: 8.3%;
   max-width: 50%;
@@ -34,7 +38,7 @@
   flex-direction: column;
   font-size: 16px;
   font-weight: 400;
-  color: #2F2F2F;
+  color: #2f2f2f;
   padding-right: 30px;
 }
 
@@ -49,12 +53,18 @@
   line-height: 1.5;
   border-radius: 0.2rem;
   color: #212529;
-  background-color: #913AFF;
+  background-color: #913aff;
   cursor: pointer;
   border: none;
-  border: 1px solid #913AFF;
+  border: 1px solid #913aff;
   font-weight: 700;
   margin-top: 10px;
+}
+
+.Project_Information {
+  color: #2f2f2f;
+  opacity: 0.4;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 760px) {

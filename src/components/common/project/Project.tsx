@@ -1,10 +1,63 @@
 "use client";
 
-import { MainContainer, ContentsContainer } from "@/app/page";
 import Footer from "@/components/Footer";
 import Header from "../Header";
 import styled from "styled-components";
 import ProjectBox from "./ProjectBox";
+import styles from "./style/project.module.css";
+
+interface ContainerPropsType {
+  category: "aboutme" | "project" | "record" | "stack" | "home";
+}
+
+export const MainContainer = styled.div<ContainerPropsType>`
+  background-color: ${(props) =>
+    props.category === "aboutme"
+      ? "#FFFFFF"
+      : props.category === "project"
+      ? "#FFFFFF"
+      : props.category === "stack"
+      ? "#EEEEEE"
+      : props.category === "record"
+      ? "#2F2F2F"
+      : "#00A564"};
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 93px 0px 40px 0px;
+
+  @media screen and (max-width: 760px) {
+    & {
+      padding: 171px 0px 40px 0px;
+    }
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 1199px) {
+    & {
+      padding: 121px 0px 40px 0px;
+    }
+  }
+`;
+
+export const ContentsContainer = styled.div`
+  margin: 0 auto;
+  min-height: 555px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 760px) {
+    & {
+      max-width: 340px;
+    }
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 1199px) {
+    & {
+      width: 960px;
+    }
+  }
+`;
 
 const ProjectContainer = styled.div`
   min-height: calc(555px - 101px);
@@ -30,7 +83,7 @@ export default function Project() {
     <MainContainer category="project">
       <Header category="project" />
       <ContentsContainer>
-        <h1 style={{ marginBottom: "40px" }}>Project</h1>
+        <h1 className={styles.Category_Title}>Project</h1>
         <ProjectContainer>
           <ProjectBox
             timeline={"2021. 4"}

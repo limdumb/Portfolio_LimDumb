@@ -2,9 +2,9 @@
 
 import Footer from "@/components/Footer";
 import Header from "../Header";
-import { ContentsContainer, MainContainer } from "@/app/page";
 import styles from "./style/aboutMe.module.css";
 import ContentsBox from "./ContentsBox";
+import { ContentsContainer, MainContainer } from "../project/Project";
 
 export default function AboutMe() {
   return (
@@ -12,7 +12,7 @@ export default function AboutMe() {
       <Header category="aboutme" />
       <ContentsContainer>
         <div>
-          <h1 style={{ marginBottom: "40px" }}>About Me</h1>
+          <h1 className={styles.Category_Title}>About Me</h1>
           <div className={styles.Info_Contents_Wrapper}>
             <ContentsBox />
             <ContentsBox />

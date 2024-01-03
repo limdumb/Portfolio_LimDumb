@@ -34,8 +34,8 @@ export default function ProjectBox(props: ProjectBoxProps) {
       </div>
       <div className={styles.Title_Wrapper}>
         <div>
-          <h5>{props.title}</h5>
-          <p style={{ color: "#2F2F2F", opacity: "0.4", fontSize: "14px" }}>
+          <h5 className={styles.Project_Title}>{props.title}</h5>
+          <p className={styles.Project_Information} >
             {props.category}
           </p>
         </div>

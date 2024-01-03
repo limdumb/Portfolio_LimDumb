@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { ContentsContainer, MainContainer } from "@/app/page";
 import Header from "../Header";
 import Footer from "@/components/Footer";
 import styles from "./style/stack.module.css";
 import StackBox from "./StackBox";
+import { ContentsContainer, MainContainer } from "../project/Project";
 
 export default function Stack() {
   return (

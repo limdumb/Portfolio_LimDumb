@@ -1,62 +1,13 @@
 "use client";
 
-import styled from "styled-components";
 import styles from "./page.module.css";
 import Header from "@/components/common/Header";
+import {
+  ContentsContainer,
+  MainContainer,
+} from "@/components/common/project/Project";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-interface ContainerPropsType {
-  category: "aboutme" | "project" | "record" | "stack" | "home";
-}
-
-export const MainContainer = styled.div<ContainerPropsType>`
-  background-color: ${(props) =>
-    props.category === "aboutme"
-      ? "#FFFFFF"
-      : props.category === "project"
-      ? "#FFFFFF"
-      : props.category === "stack"
-      ? "#EEEEEE"
-      : props.category === "record"
-      ? "#2F2F2F"
-      : "#00A564"};
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 93px 0px 40px 0px;
-  @media screen and (max-width: 760px) {
-    & {
-      padding: 171px 0px 40px 0px;
-    }
-  }
-
-  @media screen and (min-width: 760px) and (max-width: 1199px) {
-    & {
-      padding: 121px 0px 40px 0px;
-    }
-  }
-`;
-
-export const ContentsContainer = styled.div`
-  margin: 0 auto;
-  background-color: pink;
-  min-height: 555px;
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 760px) {
-    & {
-      max-width: 340px;
-    }
-  }
-
-  @media screen and (min-width: 760px) and (max-width: 1199px) {
-    & {
-      width: 960px;
-    }
-  }
-`;
 
 export default function Home() {
   return (

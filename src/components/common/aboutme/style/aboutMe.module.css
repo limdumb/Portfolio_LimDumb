@@ -4,6 +4,11 @@
   width: 1200px;
 }
 
+.Category_Title{
+  color: #2F2F2F;
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 760px) {
   .Info_Contents_Wrapper {
     width: 340px;

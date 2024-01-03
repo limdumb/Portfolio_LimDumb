@@ -14,7 +14,6 @@ const BoxContainer = styled.div`
   width: 100%;
   display: flex;
 
-
   @media screen and (max-width: 760px) {
     & {
       flex-direction: column;
@@ -35,14 +34,16 @@ export default function ProjectBox(props: ProjectBoxProps) {
       </div>
       <div className={styles.Title_Wrapper}>
         <div>
-          <h2>{props.title}</h2>
-          <h3>{props.category}</h3>
+          <h5>{props.title}</h5>
+          <p style={{ color: "#2F2F2F", opacity: "0.4", fontSize: "14px" }}>
+            {props.category}
+          </p>
         </div>
       </div>
       <div className={styles.Detaile_Wrapper}>
-        <div>
+        <div className={styles.Information_Wrapper}>
           <span>{props.information}</span>
-          <button />
+          <button className={styles.Link_Buttin}>하이</button>
         </div>
       </div>
     </BoxContainer>

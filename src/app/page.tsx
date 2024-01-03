@@ -6,12 +6,20 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 interface ContainerPropsType {
-  category: "aboutme" | "project" | "record" | "stack";
+  category: "aboutme" | "project" | "record" | "stack" | "home";
 }
 
 export const MainContainer = styled.div<ContainerPropsType>`
   background-color: ${(props) =>
-    props.category === "aboutme" ? "#FFFFFF" : "#00a564"};
+    props.category === "aboutme"
+      ? "#FFFFFF"
+      : props.category === "project"
+      ? "#FFFFFF"
+      : props.category === "stack"
+      ? "#EEEEEE"
+      : props.category === "record"
+      ? "#2F2F2F"
+      : "#00A564"};
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -52,8 +60,8 @@ export const ContentsContainer = styled.div`
 
 export default function Home() {
   return (
-    <MainContainer category="project">
-      <Header />
+    <MainContainer category="home">
+      <Header category="home" />
       <ContentsContainer>
         <div className={styles.Intro_Title_Wrapper}>
           <h1>Hello, Senior?</h1>

@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "@/components/Footer";
 import Header from "../Header";
 import { ContentsContainer, MainContainer } from "@/app/page";
@@ -7,7 +9,7 @@ import ContentsBox from "./ContentsBox";
 export default function AboutMe() {
   return (
     <MainContainer category="aboutme">
-      <Header />
+      <Header category="aboutme" />
       <ContentsContainer>
         <div>
           <h1 style={{ marginBottom: "40px" }}>About Me</h1>

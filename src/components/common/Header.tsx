@@ -1,6 +1,34 @@
 import getCategory, { CategoryType } from "@/function/getCategory";
 import styles from "./style/header.module.css";
 import Link from "next/link";
+import styled from "styled-components";
+
+interface HeaderPropsType {
+  category: "aboutme" | "project" | "record" | "stack" | "home";
+}
+
+const HeaderContainer = styled.header<HeaderPropsType>`
+  background-color: none;
+  position: fixed;
+  height: 93px;
+  width: 100%;
+  top: 0px;
+  color: ${(props) =>
+    props.category === "aboutme"
+      ? "#2F2F2F"
+      : props.category === "project"
+      ? "#2F2F2F"
+      : props.category === "stack"
+      ? "white"
+      : props.category === "record"
+      ? "black"
+      : "rgba(255, 255, 255, 0.52)"};
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 3.75rem;
+`;
 
 const HeaderNavigateButton = ({
   category,
@@ -13,11 +41,11 @@ const HeaderNavigateButton = ({
   );
 };
 
-export default function Header() {
+export default function Header(props: HeaderPropsType) {
   const headerCategory = getCategory();
 
   return (
-    <header className={styles.Header_Container}>
+    <HeaderContainer category={props.category}>
       <div className={styles.Logo_Container}>LGI Protfolio</div>
       <div className={styles.Button_Container}>
         {headerCategory.map((el) => {
@@ -31,6 +59,6 @@ export default function Header() {
           );
         })}
       </div>
-    </header>
+    </HeaderContainer>
   );
 }

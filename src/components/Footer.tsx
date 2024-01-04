@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
@@ -12,6 +12,12 @@ const FooterContainer = styled.div`
   bottom: 0px;
   background-color: rgb(0, 165, 100);
   color: rgba(255, 255, 255, 0.52);
+
+  @media screen and (max-width: 760px) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 export default function Footer() {

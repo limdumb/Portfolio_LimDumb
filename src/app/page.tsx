@@ -9,11 +9,20 @@ import {
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import photo from "/public/photo1.jpg";
+import { useState } from "react";
+import SideBar from "@/components/common/SideBar";
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <MainContainer category="home">
-      <Header category="home" />
+      {modalOpen ? <SideBar toggleModal={toggleModal}/> : null}
+      <Header category="home" toggleModal={toggleModal} />
       <ContentsContainer>
         <div className={styles.Intro_Title_Wrapper}>
           <h1>Hello, Senior?</h1>

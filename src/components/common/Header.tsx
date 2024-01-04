@@ -2,12 +2,17 @@ import getCategory, { CategoryType } from "@/function/getCategory";
 import styles from "./style/header.module.css";
 import Link from "next/link";
 import styled from "styled-components";
+import { IoMenuSharp } from "react-icons/io5";
 
-interface HeaderPropsType {
+interface HeaderContainerPropsType {
   category: "aboutme" | "project" | "record" | "stack" | "home";
 }
 
-const HeaderContainer = styled.header<HeaderPropsType>`
+interface HeaderPropsType extends HeaderContainerPropsType {
+  toggleModal: () => void;
+}
+
+const HeaderContainer = styled.header<HeaderContainerPropsType>`
   background-color: none;
   position: fixed;
   height: 93px;
@@ -52,7 +57,9 @@ export default function Header(props: HeaderPropsType) {
 
   return (
     <HeaderContainer category={props.category}>
-      <div className={styles.Logo_Container}>LGI Protfolio</div>
+      <div className={styles.Logo_Container}>
+        <Link href={"/"}>LGI Protfolio</Link>
+      </div>
       <div className={styles.Button_Container}>
         {headerCategory.map((el) => {
           return (
@@ -65,7 +72,9 @@ export default function Header(props: HeaderPropsType) {
           );
         })}
       </div>
-        <div className={styles.Bugger_Icon_Container}>하이</div>
+      <div className={styles.Bugger_Icon_Container}>
+        <IoMenuSharp size={"23px"} onClick={() => props.toggleModal()} />
+      </div>
     </HeaderContainer>
   );
 }

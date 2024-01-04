@@ -31,6 +31,7 @@
 
 .Logo_Container {
   width: 30%;
+  cursor: pointer;
 }
 
 .Link_Button {

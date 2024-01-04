@@ -10,11 +10,20 @@ import Footer from "@/components/Footer";
 import Header from "../Header";
 import { MainContainer, ContentsContainer } from "../project/Project";
 import styles from "./styles/record.module.css";
+import { useState } from "react";
+import SideBar from "../SideBar";
 
 export default function Record() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <MainContainer category="record">
-      <Header category="record" />
+      {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
+      <Header category="record" toggleModal={toggleModal} />
       <ContentsContainer>
         <h1 className={styles.Category_Title}>Record Pletform</h1>
       </ContentsContainer>

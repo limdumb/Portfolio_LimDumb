@@ -5,6 +5,8 @@ import Header from "../Header";
 import styled from "styled-components";
 import ProjectBox from "./ProjectBox";
 import styles from "./style/project.module.css";
+import { useState } from "react";
+import SideBar from "../SideBar";
 
 interface ContainerPropsType {
   category: "aboutme" | "project" | "record" | "stack" | "home";
@@ -72,9 +74,16 @@ const ProjectContainer = styled.div`
 `;
 
 export default function Project() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <MainContainer category="project">
-      <Header category="project" />
+      {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
+      <Header category="project" toggleModal={toggleModal} />
       <ContentsContainer>
         <h1 className={styles.Category_Title}>Project</h1>
         <ProjectContainer>

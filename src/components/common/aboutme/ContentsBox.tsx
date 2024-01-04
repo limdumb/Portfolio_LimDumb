@@ -9,19 +9,6 @@ interface ContentsBoxPropsType{
 
 const BoxContainer = styled.div`
   width: 50%;
-  height: 217px;
-
-  @media screen and (max-width: 760px) {
-    & {
-      height: 235.2px;
-    }
-  }
-
-  @media screen and (min-width: 760px) and (max-width: 1199px) {
-    & {
-      height: 227px;
-    }
-  }
 `;
 
 const InfoTitle = styled.h2`
@@ -40,7 +27,7 @@ const InfoContents = styled.span`
 `;
 
 const InfoContainer = styled.div`
-  width: 100%;
+  width: 90%;
   height: 82.2%;
   padding-top: 14px;
 `;

@@ -13,8 +13,18 @@ interface HeaderPropsType extends HeaderContainerPropsType {
 }
 
 const HeaderContainer = styled.header<HeaderContainerPropsType>`
-  background-color: none;
+  background-color: ${(props) =>
+    props.category === "aboutme"
+      ? "#FFFFFF"
+      : props.category === "project"
+      ? "#FFFFFF"
+      : props.category === "stack"
+      ? "#EEEEEE"
+      : props.category === "record"
+      ? "#2F2F2F"
+      : "#00A564"};
   position: fixed;
+  z-index: 10;
   height: 93px;
   width: 100%;
   top: 0px;

@@ -10,7 +10,7 @@ interface ProjectBoxProps {
 }
 
 const BoxContainer = styled.div`
-  min-height: 50%;
+  min-height: 15%;
   width: 100%;
   display: flex;
 
@@ -35,9 +35,7 @@ export default function ProjectBox(props: ProjectBoxProps) {
       <div className={styles.Title_Wrapper}>
         <div>
           <h5 className={styles.Project_Title}>{props.title}</h5>
-          <p className={styles.Project_Information} >
-            {props.category}
-          </p>
+          <p className={styles.Project_Information}>{props.category}</p>
         </div>
       </div>
       <div className={styles.Detaile_Wrapper}>
@@ -49,5 +47,3 @@ export default function ProjectBox(props: ProjectBoxProps) {
     </BoxContainer>
   );
 }
-
-// 16.6% , 25% , 50(margin 8.4)

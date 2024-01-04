@@ -7,6 +7,7 @@ import ContentsBox from "./ContentsBox";
 import { ContentsContainer, MainContainer } from "../project/Project";
 import { useState } from "react";
 import SideBar from "../SideBar";
+import { getAboutMe } from "@/function/getAboutMe";
 
 export default function AboutMe() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -15,18 +16,25 @@ export default function AboutMe() {
     setModalOpen(!modalOpen);
   };
 
+  const aboutMeArr = getAboutMe();
+
   return (
     <MainContainer category="aboutme">
       {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
       <Header category="aboutme" toggleModal={toggleModal} />
       <ContentsContainer>
-        <div>
           <h1 className={styles.Category_Title}>About Me</h1>
+        <div className={styles.Contents_Wrapper}>
           <div className={styles.Info_Contents_Wrapper}>
-            <ContentsBox title={"d"} contents={"d"} />
-            <ContentsBox title={"d"} contents={"d"} />
-            <ContentsBox title={"a"} contents={"a"} />
-            <ContentsBox title={"f"} contents={"f"} />
+            {aboutMeArr.map((el) => {
+              return (
+                <ContentsBox
+                  key={el.title}
+                  title={el.title}
+                  contents={el.contents}
+                />
+              );
+            })}
           </div>
         </div>
       </ContentsContainer>

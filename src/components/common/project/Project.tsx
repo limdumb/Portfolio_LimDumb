@@ -7,6 +7,7 @@ import ProjectBox from "./ProjectBox";
 import styles from "./style/project.module.css";
 import { useState } from "react";
 import SideBar from "../SideBar";
+import { getProjectDiscription } from "@/function/getProject";
 
 interface ContainerPropsType {
   category: "aboutme" | "project" | "record" | "stack" | "home";
@@ -28,6 +29,14 @@ export const MainContainer = styled.div<ContainerPropsType>`
   align-items: center;
   padding: 93px 0px 40px 0px;
 
+  @media screen and (max-width: 760px) {
+    & {
+      padding: 133px 0px 40px 0px;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
   @media screen and (min-width: 760px) and (max-width: 1199px) {
     & {
       padding: 121px 0px 40px 0px;
@@ -40,6 +49,7 @@ export const ContentsContainer = styled.div`
   min-height: 555px;
   width: 1200px;
   display: flex;
+  flex-direction: column;
 
   @media screen and (max-width: 760px) {
     & {
@@ -51,6 +61,10 @@ export const ContentsContainer = styled.div`
     & {
       width: 960px;
     }
+  }
+
+  &>h1{
+    justify-content: flex-start;
   }
 `;
 
@@ -80,22 +94,27 @@ export default function Project() {
     setModalOpen(!modalOpen);
   };
 
+  const projectDiscription = getProjectDiscription();
+
   return (
     <MainContainer category="project">
       {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
       <Header category="project" toggleModal={toggleModal} />
       <ContentsContainer>
-        <h1 className={styles.Category_Title}>Project</h1>
         <ProjectContainer>
-          <ProjectBox
-            timeline={"2021. 4"}
-            title={"진짜개발자"}
-            category={"Team"}
-            information={
-              "자신의 개발 실력을 GitHub 프로필 README.md에 보여줄 수 있는 템플릿입니다. 오픈 소스에 기여한 것을 기준으로 개발 실력을 판단하는 것이 목적입니다. 채용 담당자는 이 템플릿을 통해 빠르고 직관적으로 개발자의 오픈 소스 기여도를 파악할 수 있습니다"
-            }
-            detailNav={"/navigate"}
-          />
+          <h1 className={styles.Category_Title}>Project</h1>
+          {projectDiscription.map((el) => {
+            return (
+              <ProjectBox
+                key={el.title}
+                timeline={el.timeline}
+                title={el.title}
+                category={el.type}
+                information={el.contents}
+                detailNav={el.linkURL}
+              />
+            );
+          })}
         </ProjectContainer>
       </ContentsContainer>
       <Footer />

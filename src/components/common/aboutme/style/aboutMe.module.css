@@ -2,6 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
+  margin-bottom: 30px;
+}
+
+.Contents_Wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Category_Title{
@@ -9,14 +16,22 @@
   margin-bottom: 40px;
 }
 
+.Info_Contents_Wrapper > :nth-child(3){
+  margin-top: 5%;
+}
+
+.Info_Contents_Wrapper > :nth-child(4){
+  margin-top: 5%;
+}
+
 @media screen and (max-width: 760px) {
   .Info_Contents_Wrapper {
-    width: 340px;
+    width: 95%;
   }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
   .Info_Contents_Wrapper {
-    width: 960px;
+    width: 100%;
   }
 }

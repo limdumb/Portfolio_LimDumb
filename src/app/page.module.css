@@ -36,8 +36,13 @@
   }
 
   .Image_Contents {
-    width: 40%;
-    top: 230px;
+    width: 45%;
+    top: 160px;
+    min-height:411px;
+  }
+
+  .Intro_Image_Wrapper{
+    min-height: 300px;
   }
   
 }
@@ -48,6 +53,12 @@
   }
 
   .Image_Contents {
-    width: 40%;
+    width: 50%;
+    min-height: 330px;
   }
+
+  .Intro_Image_Wrapper{
+    min-height: 300px;
+  }
+  
 }

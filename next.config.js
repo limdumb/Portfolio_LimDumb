@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-}
+  images: {
+    unoptimized: true,
+    loader: "imgix",
+    path: "http://localhost:3000",
+  },
+  output: "export",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

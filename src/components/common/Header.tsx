@@ -21,13 +21,19 @@ const HeaderContainer = styled.header<HeaderPropsType>`
       : props.category === "stack"
       ? "white"
       : props.category === "record"
-      ? "black"
+      ? "white"
       : "rgba(255, 255, 255, 0.52)"};
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0rem 3.75rem;
+
+  @media screen and (max-width: 760px) {
+    & {
+      padding: 0px 25px;
+    }
+  }
 `;
 
 const HeaderNavigateButton = ({
@@ -59,6 +65,7 @@ export default function Header(props: HeaderPropsType) {
           );
         })}
       </div>
+        <div className={styles.Bugger_Icon_Container}>하이</div>
     </HeaderContainer>
   );
 }

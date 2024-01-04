@@ -2,10 +2,14 @@
 
 import styled from "styled-components";
 
+interface ContentsBoxPropsType{
+  title: string
+  contents: string
+}
+
 const BoxContainer = styled.div`
   width: 50%;
   height: 217px;
-  background-color: blue;
 
   @media screen and (max-width: 760px) {
     & {
@@ -21,15 +25,18 @@ const BoxContainer = styled.div`
 `;
 
 const InfoTitle = styled.h2`
-  background-color: gray;
   color: rgb(92, 92, 92);
   font-size: 22.5px;
+  display: block;
+  font-weight: 700;
+  opacity: 0.65;
 `;
 
 const InfoContents = styled.span`
   font-size: 15px;
   color: rgb(92, 92, 92);
-  background-color: purple;
+  font-weight: 300;
+  opacity: 0.8;
 `;
 
 const InfoContainer = styled.div`
@@ -38,12 +45,12 @@ const InfoContainer = styled.div`
   padding-top: 14px;
 `;
 
-export default function ContentsBox() {
+export default function ContentsBox(props:ContentsBoxPropsType) {
   return (
     <BoxContainer>
-      <InfoTitle>장점1</InfoTitle>
+      <InfoTitle>{props.title}</InfoTitle>
       <InfoContainer>
-        <InfoContents>장점1서브내용</InfoContents>
+        <InfoContents>{props.contents}</InfoContents>
       </InfoContainer>
     </BoxContainer>
   );

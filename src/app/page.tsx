@@ -8,6 +8,7 @@ import {
 } from "@/components/common/project/Project";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import photo from "/public/photo1.jpg";
 
 export default function Home() {
   return (
@@ -20,9 +21,7 @@ export default function Home() {
           <h2>Welcome to Eddie’s Portfolio Tree</h2>
         </div>
         <div className={styles.Intro_Image_Wrapper}>
-          <div>
-            <Image src={""} alt="" />
-          </div>
+          <Image src={photo} alt="내사진" className={styles.Image_Contents} />
         </div>
       </ContentsContainer>
       <Footer />

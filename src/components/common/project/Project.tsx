@@ -26,12 +26,6 @@ export const MainContainer = styled.div<ContainerPropsType>`
   align-items: center;
   padding: 93px 0px 40px 0px;
 
-  @media screen and (max-width: 760px) {
-    & {
-      padding: 171px 0px 40px 0px;
-    }
-  }
-
   @media screen and (min-width: 760px) and (max-width: 1199px) {
     & {
       padding: 121px 0px 40px 0px;
@@ -44,7 +38,6 @@ export const ContentsContainer = styled.div`
   min-height: 555px;
   width: 1200px;
   display: flex;
-  flex-direction: column;
 
   @media screen and (max-width: 760px) {
     & {

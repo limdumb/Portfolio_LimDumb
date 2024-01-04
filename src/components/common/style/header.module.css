@@ -12,6 +12,10 @@
   padding: 0rem 3.75rem;
 }
 
+.Bugger_Icon_Container{
+  display: none;
+}
+
 .Button_Container {
   display: flex;
   width: 45%;
@@ -43,8 +47,16 @@
     font-size: 1rem;
   }
 
+  .Logo_Container{
+    width: 33%;
+  }
+
   .Button_Container {
-    width: 70%;
+    display: none;
+  }
+
+  .Bugger_Icon_Container{
+    display: flex;
   }
 }
 

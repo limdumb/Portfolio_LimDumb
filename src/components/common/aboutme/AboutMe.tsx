@@ -14,10 +14,10 @@ export default function AboutMe() {
         <div>
           <h1 className={styles.Category_Title}>About Me</h1>
           <div className={styles.Info_Contents_Wrapper}>
-            <ContentsBox />
-            <ContentsBox />
-            <ContentsBox />
-            <ContentsBox />
+            <ContentsBox title={"d"} contents={"d"} />
+            <ContentsBox title={"d"} contents={"d"} />
+            <ContentsBox title={"a"} contents={"a"} />
+            <ContentsBox title={"f"} contents={"f"} />
           </div>
         </div>
       </ContentsContainer>

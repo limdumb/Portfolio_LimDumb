@@ -28,7 +28,6 @@ export default function Stack() {
           <StackBox />
         </div>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }

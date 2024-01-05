@@ -27,7 +27,6 @@ export default function Record() {
       <ContentsContainer>
         <h1 className={styles.Category_Title}>Record Pletform</h1>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }

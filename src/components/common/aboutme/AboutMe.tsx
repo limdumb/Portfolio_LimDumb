@@ -23,7 +23,7 @@ export default function AboutMe() {
       {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
       <Header category="aboutme" toggleModal={toggleModal} />
       <ContentsContainer>
-          <h1 className={styles.Category_Title}>About Me</h1>
+        <h1 className={styles.Category_Title}>About Me</h1>
         <div className={styles.Contents_Wrapper}>
           <div className={styles.Info_Contents_Wrapper}>
             {aboutMeArr.map((el) => {
@@ -38,7 +38,6 @@ export default function AboutMe() {
           </div>
         </div>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }

@@ -21,9 +21,9 @@ export default function Home() {
 
   return (
     <MainContainer category="home">
-      {modalOpen ? <SideBar toggleModal={toggleModal}/> : null}
+      {modalOpen ? <SideBar toggleModal={toggleModal} /> : null}
       <Header category="home" toggleModal={toggleModal} />
-      <ContentsContainer>
+      <ContentsContainer category="home">
         <div className={styles.Intro_Title_Wrapper}>
           <h1>Hello, Senior?</h1>
           <h1>Im Web Front End Developer!</h1>
@@ -33,7 +33,6 @@ export default function Home() {
           <Image src={photo} alt="내사진" className={styles.Image_Contents} />
         </div>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }

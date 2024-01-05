@@ -17,17 +17,17 @@
 }
 
 .Image_Contents {
-  width: 40%;
-  height: 50%;
-  position: absolute;
-  top: 205px;
-  right: 5;
-  bottom: 0;
+  min-width: 100%;
+  height: 65%;
 }
 
 .Intro_Image_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   min-height: 300px;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 760px) {
@@ -37,14 +37,13 @@
 
   .Image_Contents {
     width: 45%;
-    top: 160px;
-    min-height:411px;
+    min-height: 80%;
+    padding-bottom: 60px;
   }
 
-  .Intro_Image_Wrapper{
-    min-height: 300px;
+  .Intro_Image_Wrapper {
+    min-height: 65%;
   }
-  
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
@@ -53,12 +52,12 @@
   }
 
   .Image_Contents {
-    width: 50%;
-    min-height: 330px;
+    width: 40%;
+    min-height: 72%;
+    padding-bottom: 50px;
   }
 
-  .Intro_Image_Wrapper{
-    min-height: 300px;
+  .Intro_Image_Wrapper {
+    min-height: 72%
   }
-  
 }

@@ -44,26 +44,27 @@ export const MainContainer = styled.div<ContainerPropsType>`
   }
 `;
 
-export const ContentsContainer = styled.div`
+export const ContentsContainer = styled.div<{ category?: "home" }>`
   margin: 0 auto;
   min-height: 555px;
   width: 1200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.category ? "none" : "column")};
+  margin-bottom: 30px;
 
   @media screen and (max-width: 760px) {
     & {
-      max-width: 340px;
+      max-width: 95%;
     }
   }
 
   @media screen and (min-width: 760px) and (max-width: 1199px) {
     & {
-      width: 960px;
+      width: 80%;
     }
   }
 
-  &>h1{
+  & > h1 {
     justify-content: flex-start;
   }
 `;
@@ -117,7 +118,6 @@ export default function Project() {
           })}
         </ProjectContainer>
       </ContentsContainer>
-      <Footer />
     </MainContainer>
   );
 }

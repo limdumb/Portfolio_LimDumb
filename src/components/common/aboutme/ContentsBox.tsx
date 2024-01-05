@@ -2,13 +2,20 @@
 
 import styled from "styled-components";
 
-interface ContentsBoxPropsType{
-  title: string
-  contents: string
+interface ContentsBoxPropsType {
+  title: string;
+  contents: string;
 }
 
 const BoxContainer = styled.div`
   width: 50%;
+
+  @media screen and (max-width: 760px) {
+    & {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
 `;
 
 const InfoTitle = styled.h2`
@@ -30,9 +37,15 @@ const InfoContainer = styled.div`
   width: 90%;
   height: 82.2%;
   padding-top: 14px;
+
+  @media screen and (max-width: 760px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
-export default function ContentsBox(props:ContentsBoxPropsType) {
+export default function ContentsBox(props: ContentsBoxPropsType) {
   return (
     <BoxContainer>
       <InfoTitle>{props.title}</InfoTitle>

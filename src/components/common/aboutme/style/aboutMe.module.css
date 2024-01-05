@@ -25,6 +25,9 @@
 
 @media screen and (max-width: 760px) {
   .Info_Contents_Wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     width: 95%;
   }
 }

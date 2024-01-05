@@ -15,9 +15,12 @@ const BoxContainer = styled.div`
   width: 100%;
   display: flex;
 
+  margin-bottom: 20px;
   @media screen and (max-width: 760px) {
     & {
       flex-direction: column;
+      border-bottom: 1px solid rgb(116 116 116 / 15%);
+      padding-bottom: 20px;
     }
   }
 

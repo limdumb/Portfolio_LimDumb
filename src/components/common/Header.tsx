@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { IoMenuSharp } from "react-icons/io5";
 
 interface HeaderContainerPropsType {
-  category: "aboutme" | "project" | "record" | "stack" | "home";
+  category: "aboutme" | "project" | "archive" | "stack" | "home";
 }
 
 interface HeaderPropsType extends HeaderContainerPropsType {
@@ -20,7 +20,7 @@ const HeaderContainer = styled.header<HeaderContainerPropsType>`
       ? "#FFFFFF"
       : props.category === "stack"
       ? "#EEEEEE"
-      : props.category === "record"
+      : props.category === "archive"
       ? "#2F2F2F"
       : "#00A564"};
   position: fixed;
@@ -35,7 +35,7 @@ const HeaderContainer = styled.header<HeaderContainerPropsType>`
       ? "#2F2F2F"
       : props.category === "stack"
       ? "white"
-      : props.category === "record"
+      : props.category === "archive"
       ? "white"
       : "rgba(255, 255, 255, 0.52)"};
   font-weight: 700;

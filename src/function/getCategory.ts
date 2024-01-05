@@ -1,13 +1,13 @@
 export interface CategoryType {
-  category: "aboutme" | "project" | "record" | "stack";
-  viewValue: "About Me" | "Project" | "Record" | "Stack";
+  category: "aboutme" | "project" | "archive" | "stack";
+  viewValue: "About Me" | "Project" | "Archive" | "Stack";
 }
 
 export default function getCategory() {
   const category: CategoryType[] = [
     { category: "aboutme", viewValue: "About Me" },
     { category: "project", viewValue: "Project" },
-    { category: "record", viewValue: "Record" },
+    { category: "archive", viewValue: "Archive" },
     { category: "stack", viewValue: "Stack" },
   ];
 

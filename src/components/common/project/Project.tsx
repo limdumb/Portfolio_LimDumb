@@ -10,7 +10,7 @@ import SideBar from "../SideBar";
 import { getProjectDiscription } from "@/function/getProject";
 
 interface ContainerPropsType {
-  category: "aboutme" | "project" | "record" | "stack" | "home";
+  category: "aboutme" | "project" | "archive" | "stack" | "home";
 }
 
 export const MainContainer = styled.div<ContainerPropsType>`
@@ -21,7 +21,7 @@ export const MainContainer = styled.div<ContainerPropsType>`
       ? "#FFFFFF"
       : props.category === "stack"
       ? "#EEEEEE"
-      : props.category === "record"
+      : props.category === "archive"
       ? "#2F2F2F"
       : "#00A564"};
   min-height: 100vh;

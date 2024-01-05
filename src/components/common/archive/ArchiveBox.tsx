@@ -37,6 +37,13 @@ const ArchiveBoxContainer = styled.div`
   }
 
   color: black;
+
+  @media screen and (max-width: 760px) {
+    & {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
 `;
 
 const IconContainer = styled.div`

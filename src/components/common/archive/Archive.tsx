@@ -22,15 +22,15 @@ const ArchiveContainer = styled.div`
   justify-content: space-between;
   background-color: rgb(47, 47, 47);
   margin-top: 20px;
+
   @media screen and (max-width: 760px) {
     & {
       display: flex;
       flex-direction: column;
     }
-  }
 
-  @media screen and (min-width: 760px) and (max-width: 1199px) {
-    & {
+    &>:last-child{
+      margin: 0px;
     }
   }
 `;

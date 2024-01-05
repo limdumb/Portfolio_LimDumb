@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import styles from "./style/projectBox.module.css";
+import Link from "next/link";
 
 interface ProjectBoxProps {
   timeline: string;
@@ -41,7 +42,9 @@ export default function ProjectBox(props: ProjectBoxProps) {
       <div className={styles.Detaile_Wrapper}>
         <div className={styles.Information_Wrapper}>
           <span>{props.information}</span>
-          <button className={styles.Link_Buttin}>하이</button>
+          <Link href={`${props.detailNav}`} className={styles.Link_Buttin}>
+            상세보기
+          </Link>
         </div>
       </div>
     </BoxContainer>

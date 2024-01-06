@@ -22,7 +22,10 @@ const ArchiveContainer = styled.div`
   justify-content: space-between;
   background-color: rgb(47, 47, 47);
   margin-top: 20px;
-
+  flex-wrap: wrap;
+  &>:last-child{
+      margin-top: 30px;
+    }
   @media screen and (max-width: 760px) {
     & {
       display: flex;

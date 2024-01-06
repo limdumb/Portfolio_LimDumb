@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import { SiVelog } from "react-icons/si";
+import { SiNotion, SiVelog } from "react-icons/si";
 import styled from "styled-components";
 
 interface ArchiveBoxPropsType {
@@ -57,6 +57,8 @@ const ArchiveIcon = (category: ArchiveBoxPropsType["category"]) => {
       return <FaGithub size={"30px"} />;
     case "Velog":
       return <SiVelog size={"30px"} color={"rgb(38 201 153)"} />;
+    case "Notion":
+      return <SiNotion size={"30px"} />;
   }
 };
 
@@ -78,6 +80,15 @@ const ArchiveContents = (category: ArchiveBoxPropsType["category"]) => {
           <li>공부한 것을 작성하고 기록한 블로그</li>
           <li>웹 개발자를 준비하며 탐구해온 관련 지식정리</li>
           <li>공부하며 나 자신을 돌아보는 회고록</li>
+        </ul>
+      );
+    case "Notion":
+      return (
+        <ul>
+          <b>프로젝트 문서모음 및 일정정리</b>
+          <li>프로젝트의 전반적인 문서들 정리</li>
+          <li>꾸준한 회의를 통해 나온 아이디어 기록정리</li>
+          <li>무슨내용이 들어가겠죠</li>
         </ul>
       );
   }

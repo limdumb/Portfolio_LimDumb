@@ -23,16 +23,16 @@ const ArchiveContainer = styled.div`
   background-color: rgb(47, 47, 47);
   margin-top: 20px;
   flex-wrap: wrap;
-  &>:last-child{
-      margin-top: 30px;
-    }
+  & > :last-child {
+    margin-top: 30px;
+  }
   @media screen and (max-width: 760px) {
     & {
       display: flex;
       flex-direction: column;
     }
 
-    &>:last-child{
+    & > :last-child {
       margin: 0px;
     }
   }
@@ -56,7 +56,11 @@ export default function Archive() {
         <ArchiveContainer>
           {archiveArr.map((el) => {
             return (
-              <ArchiveBox category={el.category} key={el.category}></ArchiveBox>
+              <ArchiveBox
+                link={el.link}
+                category={el.category}
+                key={el.category}
+              ></ArchiveBox>
             );
           })}
         </ArchiveContainer>

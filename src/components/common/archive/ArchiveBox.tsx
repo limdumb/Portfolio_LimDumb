@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 interface ArchiveBoxPropsType {
   category: string;
+  link: string;
 }
 
-const ArchiveBoxContainer = styled.div`
+const ArchiveBoxContainer = styled.a`
   background-color: white;
   width: 45%;
   min-height: 50%;
@@ -96,7 +97,7 @@ const ArchiveContents = (category: ArchiveBoxPropsType["category"]) => {
 
 export default function ArchiveBox(props: ArchiveBoxPropsType) {
   return (
-    <ArchiveBoxContainer>
+    <ArchiveBoxContainer href={props.link}>
       <div>
         <IconContainer>{ArchiveIcon(props.category)}</IconContainer>
         <h2>{props.category}</h2>

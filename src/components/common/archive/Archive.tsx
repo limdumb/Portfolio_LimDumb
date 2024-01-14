@@ -1,11 +1,4 @@
 "use client";
-// Home 이미지,글 원컬럼
-// AsideBar 고치기
-
-// Project 상세페이지 => GIF 기능설명 ( 전체적인 기능 사용 )
-// Project 기능별 Discription 추가 ( 모바일은 Gif와 기능별 Discription이 coloumn 으로)
-// Stack 정리
-// Page 넘어갈때 애니메이션 라이브러리 찾아보기
 
 import Header from "../Header";
 import { MainContainer, ContentsContainer } from "../project/Project";

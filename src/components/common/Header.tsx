@@ -34,7 +34,7 @@ const HeaderContainer = styled.header<HeaderContainerPropsType>`
       : props.category === "project"
       ? "#2F2F2F"
       : props.category === "stack"
-      ? "white"
+      ? "#2F2F2F"
       : props.category === "archive"
       ? "white"
       : "rgba(255, 255, 255, 0.52)"};

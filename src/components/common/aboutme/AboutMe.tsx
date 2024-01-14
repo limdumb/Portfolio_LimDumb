@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/Footer";
 import Header from "../Header";
 import styles from "./style/aboutMe.module.css";
 import ContentsBox from "./ContentsBox";

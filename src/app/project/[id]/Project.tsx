@@ -32,6 +32,7 @@ const DetailMainContainer = styled.div`
   min-height: 100vh;
   flex-direction: column;
   width: 75%;
+  padding: 40px 20px;
 
   @media screen and (max-width: 760px) {
     width: 100%;
@@ -42,9 +43,27 @@ const DetailMainContainer = styled.div`
   }
 `;
 
-const FeatureContainer = styled.div``;
+const GIFContainer = styled.div`
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
-const FeatureWrapper = styled.div``;
+const FeatureContainer = styled.ul``;
+
+const FeatureWrapper = styled.li`
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 200;
+
+  & > h2 {
+    margin-bottom: 9px;
+  }
+  margin-bottom: 10px;
+`;
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const projectDetailValue = getProjectDetailValue({ id: params.id });
@@ -52,13 +71,28 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
     <ProjectDetailContainer>
       <TitleContainer>
         <h1>{projectDetailValue.name}</h1>
+        <h4>{projectDetailValue.type}</h4>
       </TitleContainer>
       <DetailMainContainer>
-        <div></div>
+        <GIFContainer>
+          <h3>프로젝트 시연 GIF</h3>
+        </GIFContainer>
+        <h3
+          style={{
+            color: "rgba(255, 255, 255, 0.5);",
+            marginBottom: "20px",
+            marginTop: "20px",
+          }}
+        >
+          주요기능
+        </h3>
         <FeatureContainer>
           {projectDetailValue.features?.map((el) => {
             return (
-              <FeatureWrapper key={el.feature}>{el.feature}</FeatureWrapper>
+              <FeatureWrapper key={el.feature}>
+                <h2>{el.feature}</h2>
+                <span>{el.discription}</span>
+              </FeatureWrapper>
             );
           })}
         </FeatureContainer>

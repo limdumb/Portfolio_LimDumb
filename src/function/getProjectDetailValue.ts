@@ -3,6 +3,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
     case "1":
       return {
         name: "Dodge.GG",
+        type:"Team Project",
         gifUrl: "",
         github: "https://github.com/limdumb/DodGe.gg",
         url: "http://dodge.gg.s3-website.ap-northeast-2.amazonaws.com/",
@@ -31,6 +32,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
     case "2":
       return {
         name: "라시에르",
+        type:"Team Project",
         gifUrl: "",
         github: "https://github.com/codestates-seb/seb41_main_002",
         url: "http://seb41team02.s3-website.ap-northeast-2.amazonaws.com/",
@@ -71,6 +73,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
     case "3":
       return {
         name: "NerdNest",
+        type:"Team Project",
         gifUrl: "",
         github: "https://github.com/limdumb/NerdNest_FE",
         url: "http://nerdnest.s3-website.ap-northeast-2.amazonaws.com/",
@@ -107,6 +110,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
     case "4":
       return {
         name: "HighEndy",
+        type:"Solo Project",
         gifUrl: "",
         github: "https://github.com/limdumb/HighEndy",
         stack: [
@@ -139,6 +143,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
     case "5":
       return {
         name: "Whale-Chart",
+        type:"Solo Project",
         gifUrl: "",
         github: "https://github.com/limdumb/Whale-Chart-Client",
         url: "",

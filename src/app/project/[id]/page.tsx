@@ -1,3 +1,4 @@
+import getProjectDetailValue from "@/function/getProjectDetailValue";
 import ProjectDetail from "./Project";
 
 export async function generateStaticParams() {

@@ -4,22 +4,22 @@
   width: 100%;
 }
 
-.Contents_Wrapper{
+.Contents_Wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.Category_Title{
-  color: #2F2F2F;
+.Category_Title {
+  color: #2f2f2f;
   margin-bottom: 40px;
 }
 
-.Info_Contents_Wrapper > :nth-child(3){
+.Info_Contents_Wrapper > :nth-child(3) {
   margin-top: 5%;
 }
 
-.Info_Contents_Wrapper > :nth-child(4){
+.Info_Contents_Wrapper > :nth-child(4) {
   margin-top: 5%;
 }
 

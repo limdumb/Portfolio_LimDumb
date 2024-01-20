@@ -47,12 +47,12 @@ const ArchiveBoxContainer = styled.a`
   }
 `;
 
-const IconContainer = styled.div`
+export const IconContainer = styled.div`
   margin-right: 10px;
   padding-top: 3px;
 `;
 
-const ArchiveIcon = (category: ArchiveBoxPropsType["category"]) => {
+export const ArchiveIcon = (category: ArchiveBoxPropsType["category"]) => {
   switch (category) {
     case "GitHub":
       return <FaGithub size={"30px"} />;
@@ -61,6 +61,8 @@ const ArchiveIcon = (category: ArchiveBoxPropsType["category"]) => {
     case "Notion":
       return <SiNotion size={"30px"} />;
   }
+
+  return null;
 };
 
 const ArchiveContents = (category: ArchiveBoxPropsType["category"]) => {

@@ -14,7 +14,6 @@ const BoxContainer = styled.div`
   min-height: 15%;
   width: 100%;
   display: flex;
-
   margin-bottom: 20px;
   @media screen and (max-width: 760px) {
     & {

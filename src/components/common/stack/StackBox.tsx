@@ -77,7 +77,7 @@ export default function StackBox(props: StackBoxProps) {
       <div className={styles.Image_Container}>
         {<StackImage stack={props.stack} />}
       </div>
-      <h2 className={styles.Stack_Title}>{props.stack}</h2>
+      <h5 className={styles.Stack_Title}>{props.stack}</h5>
       <span className={styles.Stack_Discription}>{props.discription}</span>
     </div>
   );

@@ -32,6 +32,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  .Stack_Box_Wrapper > :nth-child(3) {
+    margin-top: 20px;
+  }
+
+  .Stack_Box_Wrapper > :nth-child(4) {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {

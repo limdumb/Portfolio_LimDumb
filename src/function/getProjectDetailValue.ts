@@ -159,7 +159,6 @@ export default function getProjectDetailValue({ id }: { id: string }) {
         name: "Whale-Chart",
         type: "Solo Project",
         github: "https://github.com/limdumb/Whale-Chart-Client",
-        url: "",
         stack: [
           "JavaScript",
           "TypeScript",

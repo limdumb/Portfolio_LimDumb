@@ -129,11 +129,11 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             display: "flex",
           }}
         >
-          배포링크
+          {projectDetailValue.url ? "배포링크":"GitHub 링크"}
         </h3>
         <div className={styles.Navigate_Box_Wrapper}>
           <NavigateBox category="GitHub" url={projectDetailValue.github} />
-          {projectDetailValue.url?.length !== 0 ? (
+          {projectDetailValue.url ? (
             <NavigateBox category="Service" url={projectDetailValue.url} />
           ) : null}
         </div>

@@ -47,15 +47,7 @@ export const getProjectDiscription = () => {
       contents:
         "여러개의 플랫폼의 차트 상황을 확인 하고 싶을때 각각의 차트를 확인하기 힘들다 보니 한눈에 볼 수 있는 페이지를 만들면 좋지않을까 라는 생각으로 시작했습니다. 각각의 차트순위를 확인하고 한시간 단위로 변경되는 정보를 통해서 이전시간과 순위변동이 어떻게 되었는지도 확인 할 수 있습니다.",
       linkURL: "/project/5",
-    },
-    {
-      timeline: "2023. 11",
-      title: "Branch",
-      type: "Solo",
-      contents:
-        "서로간의 소통이 가능한 SNS 사이트 입니다. SNS에 기본적인 게시글,댓글,Profile 확인,친구신청,Message 등등이 가능한 서비스 입니다. 회원가입과 로그인을 제외한 실제 Contents의 구조는 SPA 형식이며 Next Js를 통해서 Route를 진행하여 페이지를 이동하는 느낌이 들지 않게 하는걸 중점으로 구성하여 결과물을 만들었습니다.",
-      linkURL: "/project/6",
-    },
+    }
   ];
 
   return result;

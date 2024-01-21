@@ -351,7 +351,7 @@ export const GIFImage = ({ id }: { id: string }) => {
           ),
           title: "카테고리별 차트",
           discription:
-            "레이아웃은 Header와 AsideBar는 고정되게 만들고 Click시 Contents만 변경되도록 구성하였고 기본적인 Tab Navigation을F 구현했습니다.",
+            "레이아웃은 Header와 AsideBar는 고정되게 만들고 Click시 Contents만 변경되도록 구성하였고 기본적인 Tab Navigation을 구현했습니다.",
         },
       ];
   }

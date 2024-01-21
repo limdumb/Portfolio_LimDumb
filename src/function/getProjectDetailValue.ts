@@ -22,7 +22,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
             "챔피언 정보 상세보기",
             "챔피언 추천 정보노출",
             "챔피언 Tab Filter",
-            "Op 챔프 및 챔피언 정보에 필요한 데이터 크롤링",
+            "데이터 크롤링",
             "Op 챔피언",
             "Op 챔피언 Filter",
             "소환사 검색",
@@ -72,7 +72,10 @@ export default function getProjectDetailValue({ id }: { id: string }) {
             "내정보 수정페이지",
           ],
           creates: [
-            "상품 리스트 페이지, 상품 상세페이지, 장바구니 페이지, 피부타입 검사 페이지",
+            "상품 리스트 페이지",
+            "상품 상세페이지",
+            "장바구니 페이지",
+            "피부타입 검사 페이지",
           ],
           percentage: "60%",
           discription:

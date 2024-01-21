@@ -68,6 +68,47 @@ const GIFContainer = styled.div`
     margin-top: 10px;
   }
 `;
+const ContributionListContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+`;
+
+const DiscriptionWrapper = styled.div`
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+
+  & > span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+  }
+
+  & > h3{
+    margin-bottom: 5px;
+  }
+`;
+
+const ContributionListWrapper = styled.ul`
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  border-radius: 10px;
+
+  & > h3 {
+    margin-bottom: 10px;
+  }
+
+  & > li {
+    line-height: 25px;
+    list-style-type: circle;
+  }
+
+  @media screen and (max-width: 760px) {
+    & > li {
+      list-style-type: none;
+      line-height: 28px;
+    }
+  }
+`;
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const projectDetailValue = getProjectDetailValue({ id: params.id });
@@ -95,6 +136,41 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             <NavigateBox category="Service" url={projectDetailValue.url} />
           ) : null}
         </div>
+        {projectDetailValue.contribution ? (
+          <>
+            <h3
+              style={{
+                color: "rgba(255, 255, 255, 0.5)",
+                marginBottom: "20px",
+                display: "flex",
+              }}
+            >
+              프로젝트 기여도 {projectDetailValue.contribution?.percentage}
+            </h3>
+            <ContributionListContainer>
+              <ContributionListWrapper>
+                <h3>기능 리스트</h3>
+                {projectDetailValue.contribution?.features.map((el) => {
+                  return (
+                    <>
+                      <li key={el}>{el}</li>
+                    </>
+                  );
+                })}
+              </ContributionListWrapper>
+              <ContributionListWrapper>
+                <h3>총 구현 리스트</h3>
+                {projectDetailValue.contribution?.creates.map((el) => {
+                  return <li key={el}>{el}</li>;
+                })}
+              </ContributionListWrapper>
+            </ContributionListContainer>
+            <DiscriptionWrapper>
+              <h3>Discription</h3>
+              <span>{projectDetailValue.contribution?.discription}</span>
+            </DiscriptionWrapper>
+          </>
+        ) : null}
         <h3
           style={{
             color: "rgba(255, 255, 255, 0.5)",

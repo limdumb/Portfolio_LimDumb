@@ -28,9 +28,12 @@ export default function Home() {
             <Image src={photo} alt="내사진" className={styles.Image_Contents} />
           </div>
           <div className={styles.Intro_Title_Wrapper}>
-            <h1>Hello, Senior?</h1>
-            <span>Im Web Front End Developer!</span>
-            <span>Welcome to Eddie’s Portfolio Tree</span>
+            <h1>꾸준함과 흡수력으로</h1>
+            <h2 style={{ marginBottom: "20px" }}>
+              성장과 발전을 지속해서 갈망하고
+            </h2>
+            <h1>새로운것에 두려움이 없는</h1>
+            <h2>Front End 개발자 임경인 입니다.</h2>
           </div>
         </div>
       </ContentsContainer>

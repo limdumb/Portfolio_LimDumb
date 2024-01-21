@@ -33,9 +33,7 @@ const DetailMainContainer = styled.div`
   background-color: rgb(41 44 55);
   border-radius: 6px;
   min-height: 100vh;
-  flex-direction: column;
-  width: 75%;
-  padding: 40px 20px;
+  padding: 30px;
 
   @media screen and (max-width: 760px) {
     width: 100%;
@@ -64,10 +62,12 @@ const GIFContainer = styled.div`
     color: rgba(255, 255, 255, 0.8);
     font-size: 16px;
   }
+
   & div > div {
     margin-top: 10px;
   }
 `;
+
 const ContributionListContainer = styled.div`
   display: flex;
   justify-content: space-around;
@@ -83,7 +83,7 @@ const DiscriptionWrapper = styled.div`
     font-size: 16px;
   }
 
-  & > h3{
+  & > h3 {
     margin-bottom: 5px;
   }
 `;
@@ -151,11 +151,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               <ContributionListWrapper>
                 <h3>기능 리스트</h3>
                 {projectDetailValue.contribution?.features.map((el) => {
-                  return (
-                    <>
-                      <li key={el}>{el}</li>
-                    </>
-                  );
+                  return <li key={el}>{el}</li>;
                 })}
               </ContributionListWrapper>
               <ContributionListWrapper>

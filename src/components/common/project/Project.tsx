@@ -46,7 +46,6 @@ export const MainContainer = styled.div<ContainerPropsType>`
 
 export const ContentsContainer = styled.div<{ category?: "home" }>`
   margin: 0 auto;
-  min-height: 555px;
   width: 1200px;
   display: flex;
   flex-direction: ${(props) => (props.category ? "none" : "column")};

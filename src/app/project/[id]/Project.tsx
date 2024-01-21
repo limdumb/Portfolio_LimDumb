@@ -30,6 +30,7 @@ const TitleContainer = styled.div`
 `;
 
 const DetailMainContainer = styled.div`
+  width: 75%;
   background-color: rgb(41 44 55);
   border-radius: 6px;
   min-height: 100vh;

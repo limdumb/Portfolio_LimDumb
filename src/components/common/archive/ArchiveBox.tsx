@@ -91,7 +91,7 @@ const ArchiveContents = (category: ArchiveBoxPropsType["category"]) => {
           <b>프로젝트 문서모음 및 일정정리</b>
           <li>프로젝트의 전반적인 문서들 정리</li>
           <li>꾸준한 회의를 통해 나온 아이디어 기록정리</li>
-          <li>무슨내용이 들어가겠죠</li>
+          <li>공부중 경험했던 일들의 기록물들</li>
         </ul>
       );
   }

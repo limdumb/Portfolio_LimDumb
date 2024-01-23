@@ -31,6 +31,12 @@ const NavigateBoxContainer = styled.div`
       width: 45%;
       display: flex;
     }
+
+    & > a > h2 {
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
   }
 `;
 

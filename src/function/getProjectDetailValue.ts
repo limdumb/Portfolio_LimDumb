@@ -160,7 +160,7 @@ export default function getProjectDetailValue({ id }: { id: string }) {
         type: "Solo Project",
         github: "https://github.com/limdumb/Watching-JEJU",
         stack: [
-          "Exop",
+          "Expo",
           "JavaScript",
           "TypeScript",
           "React",

@@ -28,9 +28,10 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  width: 80%;
+  width: 75%;
 
   & > ul {
+    color: rgba(255, 255, 255, 0.782);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -39,6 +40,19 @@ const TitleContainer = styled.div`
 
   & > ul > li {
     margin-top: 5px;
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 1199px) {
+    width: 80%;
+    & > ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    & > ul > li {
+      margin-right: 10px;
+    }
   }
 
   @media screen and (max-width: 760px) {

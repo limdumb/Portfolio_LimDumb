@@ -5,6 +5,7 @@ import styled from "styled-components";
 import styles from "./styles/project.module.css";
 import NavigateBox from "@/components/common/project/NavigateBox";
 import { GIFImage } from "@/components/common/project/GIFImage";
+import ProjectStackBox from "@/components/common/project/ProjectStackBox";
 
 const ProjectDetailContainer = styled.div`
   background-color: rgb(60, 67, 94);
@@ -27,6 +28,29 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  width: 80%;
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 760px) {
+    & > ul > li {
+      font-size: 12px;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+
+    & > ul {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    width: 100%;
+  }
 `;
 
 const DetailMainContainer = styled.div`
@@ -120,6 +144,11 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
       <TitleContainer>
         <h1>{projectDetailValue.name}</h1>
         <h4>{projectDetailValue.type}</h4>
+        <ul>
+          {projectDetailValue.stack?.map((el) => {
+            return <ProjectStackBox key={el} stack={el} />;
+          })}
+        </ul>
       </TitleContainer>
       <DetailMainContainer>
         <h3
@@ -129,7 +158,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             display: "flex",
           }}
         >
-          {projectDetailValue.url ? "배포링크":"GitHub 링크"}
+          {projectDetailValue.url ? "배포링크" : "GitHub 링크"}
         </h3>
         <div className={styles.Navigate_Box_Wrapper}>
           <NavigateBox category="GitHub" url={projectDetailValue.github} />

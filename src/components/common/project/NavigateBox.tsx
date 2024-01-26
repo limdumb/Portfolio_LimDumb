@@ -43,7 +43,7 @@ const NavigateBoxContainer = styled.div`
 export default function NavigateBox(props: NaviageBoxProps) {
   return (
     <NavigateBoxContainer>
-      <Link href={props.url ? props.url : ""}>
+      <Link target="_blank" href={props.url ? props.url : ""}>
         {props.category !== "GitHub" ? null : (
           <IconContainer>{ArchiveIcon(props.category)}</IconContainer>
         )}

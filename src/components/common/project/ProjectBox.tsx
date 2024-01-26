@@ -44,7 +44,11 @@ export default function ProjectBox(props: ProjectBoxProps) {
       <div className={styles.Detaile_Wrapper}>
         <div className={styles.Information_Wrapper}>
           <span>{props.information}</span>
-          <Link href={`${props.detailNav}`} className={styles.Link_Buttin}>
+          <Link
+            target="_blank"
+            href={`${props.detailNav}`}
+            className={styles.Link_Buttin}
+          >
             상세보기
           </Link>
         </div>

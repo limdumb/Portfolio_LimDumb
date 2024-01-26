@@ -23,6 +23,10 @@ import highendySignup from "/public/회원가입.gif";
 import calinder from "/public/calinder.gif";
 import chartCategory from "/public/chartCategory.gif";
 import chartList from "/public/chartList.gif";
+import mapTab from "/public/mapTab.gif";
+import myprofile from "/public/mypage.gif";
+import storeSearch from "/public/search.gif";
+import storeDetail from "/public/storeDetail.gif";
 import styles from "./style/projectBox.module.css";
 
 export const GIFImage = ({ id }: { id: string }) => {
@@ -313,6 +317,61 @@ export const GIFImage = ({ id }: { id: string }) => {
         },
       ];
     case "5":
+      return [
+        {
+          gif: (
+            <Image
+              key={id}
+              src={mapTab}
+              alt="gif"
+              className={styles.GIF_Image}
+            />
+          ),
+          title: "지역별 카페 리스트",
+          discription:
+            "유저들은 지역별 Tab을 통해서 해당 지역의 카페 리스트를 확인 할 수 있습니다. 무한스크롤을 적용하여 구현 하였습니다.",
+        },
+        {
+          gif: (
+            <Image
+              key={id}
+              src={myprofile}
+              alt="gif"
+              className={styles.GIF_Image}
+            />
+          ),
+          title: "내 프로필 페이지",
+          discription:
+            "내가 작성한 리뷰를 볼 수 있고 좋아요한 가계의 수를 볼 수 있습니다. 로그아웃도 가능합니다.",
+        },
+        {
+          gif: (
+            <Image
+              key={id}
+              src={storeSearch}
+              alt="gif"
+              className={styles.GIF_Image}
+            />
+          ),
+          title: "가게 검색기능",
+          discription:
+            "가게의 상호명을 기준으로 검색 할 수 있습니다. 가게의 이름과 소갯말들 그리고 별점을 확인 할 수 있습니다.",
+        },
+        {
+          gif: (
+            <Image
+              key={id}
+              src={storeDetail}
+              alt="gif"
+              className={styles.GIF_Image}
+            />
+          ),
+          title: "가게 상세정보",
+          discription:
+            "가게의 상세 정보를 확인 할 수 있습니다. 현재 영업중인지, 아닌지 확인이 가능하고 리뷰를 작성 할 수있고 즐겨찾기 및 전반적인 가게의 정보들을 확인 할 수 있습니다.",
+        },
+      ];
+    case "6":
       return [
         {
           gif: (

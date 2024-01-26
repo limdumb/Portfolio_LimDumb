@@ -156,6 +156,21 @@ export default function getProjectDetailValue({ id }: { id: string }) {
       };
     case "5":
       return {
+        name: "Watching-JeJu",
+        type: "Solo Project",
+        github: "https://github.com/limdumb/Watching-JEJU",
+        stack: [
+          "Exop",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Styled-Components",
+          "React-Route-Dom",
+          "Axios",
+        ],
+      };
+    case "6":
+      return {
         name: "Whale-Chart",
         type: "Solo Project",
         github: "https://github.com/limdumb/Whale-Chart-Client",

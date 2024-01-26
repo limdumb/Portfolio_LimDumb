@@ -8,9 +8,7 @@ export async function generateStaticParams() {
     { id: "4" },
     { id: "5" },
     { id: "6" },
-  ].map((el) => ({
-    id: `${el.id}`,
-  }));
+  ];
 }
 
 export default function ProjectDetailPage({

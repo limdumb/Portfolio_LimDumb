@@ -68,7 +68,7 @@ export default function Header(props: HeaderPropsType) {
   return (
     <HeaderContainer category={props.category}>
       <div className={styles.Logo_Container}>
-        <Link href={"/"}>LGI Protfolio</Link>
+        <Link href={"/"}>LGI Portfolio</Link>
       </div>
       <div className={styles.Button_Container}>
         {headerCategory.map((el) => {

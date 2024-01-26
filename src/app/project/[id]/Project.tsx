@@ -37,6 +37,10 @@ const TitleContainer = styled.div`
     margin-top: 20px;
   }
 
+  & > ul > li {
+    margin-top: 5px;
+  }
+
   @media screen and (max-width: 760px) {
     & > ul > li {
       font-size: 12px;

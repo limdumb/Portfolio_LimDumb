@@ -44,6 +44,11 @@ export const getStackValue = () => {
         discription:
           "Props를 받아 조건부 Styling을 하는데 무리가 없고 TypeScript를 같이 사용한 Type지정과 반응형 UI 코드를 작성할 수 있습니다.",
       },
+      {
+        stack: "Recoil",
+        discription:
+          "전역 상태 관리가 왜 필요한지 알고있고, Atom의 값을 Selector 함수를 작성해서 핸들링 할 수 있습니다.",
+      },
     ],
     framWork: [
       {

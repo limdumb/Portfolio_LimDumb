@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "../Header";
-import Footer from "@/components/Footer";
 import styles from "./style/stack.module.css";
 import StackBox from "./StackBox";
 import { ContentsContainer, MainContainer } from "../project/Project";

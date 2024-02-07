@@ -8,6 +8,7 @@ import NextIcon from "/public/next.svg";
 import ReactIcon from "/public/react.svg";
 import NativeIcon from "/public/reactnative.svg";
 import QueryIcon from "/public/reactquery.svg";
+import Recoil from "/public/recoil.png";
 
 interface StackBoxProps {
   stack: string;
@@ -67,6 +68,10 @@ const StackImage = (props: StackIconProps) => {
           src={QueryIcon}
           alt={props.stack}
         />
+      );
+    case "Recoil":
+      return (
+        <Image className={styles.Icon_Image} src={Recoil} alt={props.stack} />
       );
   }
 };
